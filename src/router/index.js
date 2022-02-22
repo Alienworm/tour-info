@@ -13,6 +13,11 @@ const routes = [
     path: '/tour_list',
     name: 'TourList',
     component: () => import('../views/TourList.vue')
+  },
+  {
+    path: '/resume',
+    name: 'Resume',
+    component: () => import('../views/Resume.vue')
   }
 ];
 

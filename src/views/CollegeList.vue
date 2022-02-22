@@ -14,6 +14,7 @@
 
 <script>
   import BaseHeader from "../components/BaseHeader";
+  import {getCollegeList} from "../api/blog";
   export default {
     name: "CollegeList",
     components: {BaseHeader},
@@ -43,9 +44,19 @@
         ]
       }
     },
+    mounted() {
+      this.$nextTick(() => {
+        this.getCollegeList();
+      });
+    },
     methods: {
+      async getCollegeList() {
+        const result = await getCollegeList();
+        this.collegeList = result.college_list;
+      },
       toTourList(college) {
-        this.$router.push({ name: 'TourList', params: college})
+        localStorage.clear();
+        this.$router.push({ name: 'TourList', params: college});
       }
     }
   }

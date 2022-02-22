@@ -11,17 +11,17 @@ module.exports = {
       }
     }
   },
-  // devServer: {
-  //   hot:true,
-  //   open: true,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://127.0.0.1:5000/blog',
-  //       changeOrigin: true,
-  //       pathRewrite: {
-  //         '^/api': '/'
-  //       }
-  //     }
-  //   },
-  // }
+  devServer: {
+    hot:true,
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://119.91.234.90:5000/tour',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+    },
+  }
 };
