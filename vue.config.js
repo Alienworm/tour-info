@@ -16,7 +16,7 @@ module.exports = {
     open: true,
     proxy: {
       '/api': {
-        target: 'http://119.91.234.90:5000/tour',
+        target: process.env["VUE_APP_URL"],
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/'
