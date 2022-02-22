@@ -6,7 +6,7 @@
         <div class="tour-info" v-for="(tour, index) in tourList" :key="index" @click="toTourInfo(tour)">
           <div class="photo-container">
             <div class="photo-container-inner">
-              <img :src="tour.base_info.photo" alt="logo" />
+              <img :src="tour.base_info.photo === '' ? 'http://alienworm.top/wp-content/uploads/2018/07/alien-test.png' : tour.base_info.photo" alt="logo" />
             </div>
           </div>
           <div class="base-information-container">
